@@ -1,0 +1,157 @@
+     * {
+       box-sizing: border-box;
+     }
+     
+     html,
+     body {
+       padding: 0;
+       margin: 0;
+       font-family: Courier New;
+       color: #333;
+     }
+     
+     .container {
+       display: -webkit-box;
+       display: -webkit-flex;
+       display: -ms-flexbox;
+       display: flex;
+       min-height: 100vh;
+     }
+     
+     .container:before {
+       content: "";
+       width: 100%;
+       height: 100%;
+       top: 0;
+       left: 0;
+       position: absolute;
+       background-color: #333;
+       background-image: url(images/bg.jpg);
+       background-size: cover;
+       background-position: center;
+       background-repeat: no-repeat;
+       background-attachment: fixed;
+       -webkit-filter: blur(5px) brightness(50%);
+       filter: blur(5px) brightness(50%);
+       box-shadow: 0 0 10px 6px #333;
+     }
+     
+     footer {
+       margin: 0;
+       margin-bottom: -8px;
+       text-align: right;
+       font-size: 0.8em;
+     }
+     
+     .card {
+       z-index: 1000;
+       display: -webkit-box;
+       display: -webkit-flex;
+       display: -ms-flexbox;
+       display: flex;
+       -webkit-box-orient: vertical;
+       -webkit-box-direction: normal;
+       -webkit-flex-direction: column;
+       -ms-flex-direction: column;
+       flex-direction: column;
+       width: 50%;
+       padding: 16px;
+       /* magic */
+       margin: auto;
+       border-radius: 6px;
+       background-color: #eee;
+       box-shadow: 5px 5px 20px #000;
+     }
+     
+     .actions {
+       width: 100%;
+       padding-top: 16px;
+       display: -webkit-box;
+       display: -webkit-flex;
+       display: -ms-flexbox;
+       display: flex;
+       border-top: 1px solid #777;
+       -webkit-justify-content: space-around;
+       -ms-flex-pack: distribute;
+       justify-content: space-around;
+     }
+     
+     .quote {
+       font-size: 1.5em;
+       line-height: 1.5;
+       text-align: center;
+     }
+     
+     .quote p:before,
+     .quote p:after {
+       font-family: FontAwesome;
+       font-size: 0.5em;
+       vertical-align: top;
+     }
+     
+     .quote p:before {
+       content: "\f10d";
+     }
+     
+     .quote p:after {
+       content: "\f10e";
+     }
+     
+     .author {
+       text-align: right;
+     }
+     
+     .btn {
+       text-decoration: none;
+       padding: 6px 6px;
+       border: 1px solid #000;
+       background: transparent;
+       font-size: 1em;
+       cursor: pointer;
+       background: transparent;
+       border-radius: 4px;
+     }
+     
+     .btn-new-quote,
+     .btn-link {
+       color: #333;
+       border-color: #333;
+     }
+     
+     .btn-twitter {
+       color: #1da1f2;
+       border-color: #1da1f2;
+     }
+     
+     .btn-new-quote:hover,
+     .btn-link:hover {
+       color: white;
+       background-color: #333;
+     }
+     
+     .btn-twitter:hover {
+       color: white;
+       background-color: #1da1f2;
+     }
+     
+     @media (max-width:660px) {
+       .container {
+         padding: 32px;
+         min-height: auto;
+       }
+       .card {
+         margin: 0;
+         width: 100%;
+       }
+       .actions {
+         -webkit-box-orient: vertical;
+         -webkit-box-direction: normal;
+         -webkit-flex-direction: column;
+         -ms-flex-direction: column;
+         flex-direction: column;
+       }
+       html,
+       body {
+         font-size: 1em;
+       }
+     }
