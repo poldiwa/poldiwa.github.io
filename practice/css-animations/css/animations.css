@@ -1,0 +1,204 @@
+/*
+    @author: Paul John C. Diwa
+    @title: CSS Animations
+    @Date: Jan 30, 2016
+*/
+
+*{
+    box-sizing: border-box;
+}
+html{
+    font-family: monospace;
+    background-color: #ddd;
+}
+hr{
+    border: 1px dashed #777;
+}
+.row{
+  display: flex;
+}
+.rectangle{
+    margin: auto;
+    width: 33%;
+    height: 100px;
+    padding: 15px;
+    text-align: center;
+    font-size: 2em;
+    border: 1px dotted #333;
+}
+.red{
+    background-color: red;
+}
+.orange{
+    background-color: orange;
+}
+.yellow{
+    background-color: yellow;
+}
+.green{
+    background-color: green;
+}
+.blue{
+    background-color: blue;
+}
+.indigo{
+    background-color: indigo;
+}
+.violet{
+    background-color: violet;
+}
+.black{
+    background-color: black;
+}
+
+.fade{
+    -webkit-animation: fade 2s infinite ease-out;
+}
+
+@-webkit-keyframes fade{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.shake{
+    -webkit-animation: shake 0.1s infinite ease-out;
+}
+
+@-webkit-keyframes shake{
+    from{
+        -webkit-transform: translateX(-10px);
+    }
+    to{
+        -webkit-transform: translateX(10px);
+    }
+}
+
+
+.bounce{
+    -webkit-animation: bounce 0.5s infinite cubic-bezier(1,-0.25,1,0.25);
+}
+
+@-webkit-keyframes bounce{
+    from{
+        -webkit-transform: translateY(0px);
+    }
+    to{
+        -webkit-transform: translateY(10px);
+    }
+}
+
+
+.flip{
+    -webkit-animation: flip 1s infinite;
+}
+
+@-webkit-keyframes flip{
+    0%,100%{
+        -webkit-transform: rotate(0deg) scale(1);
+    }
+    10%,30%,50%,70%,90%{
+        -webkit-transform: rotate(-3deg) scale(1.1);
+    }
+    20%,40%,60%,80%{
+        -webkit-transform: rotate(3deg) scale(1.1);
+    }
+}
+
+
+.swing{
+    -webkit-animation: swing 2s infinite;
+}
+
+@-webkit-keyframes swing{
+    20%{
+        -webkit-transform-origin: top;
+        -webkit-transform: rotate(5deg);
+    }
+    40%{
+        -webkit-transform-origin: top;
+        -webkit-transform: rotate(-5deg);
+    }
+    60%{
+        -webkit-transform-origin: top;
+        -webkit-transform: rotate(10deg);
+    }
+    80%{
+        -webkit-transform-origin: top;
+        -webkit-transform: rotate(-10deg);
+    }
+    100%{
+        -webkit-transform: rotate(0deg);
+    } 
+}
+
+
+
+.wobble{
+    -webkit-animation: wobble 0.5s infinite;
+}
+
+@-webkit-keyframes wobble{
+    0%,100%{
+        -webkit-transform: rotate(0deg) translateX(0px);
+    }
+    20%,80%{
+        -webkit-transform: rotate(-3deg) translateX(-70px);
+    }
+    40%,60%{
+        -webkit-transform: rotate(3deg) translateX(70px);
+    }
+}
+
+.wiggle{
+    -webkit-animation: wiggle 1s infinite;
+}
+
+@-webkit-keyframes wiggle{
+    0%,100%{
+        -webkit-transform: skewX(0deg)
+    }
+    20%{
+        -webkit-transform: skewX(-20deg);
+    }
+    30%{
+        -webkit-transform: skewX(20deg);
+    }
+    40%{
+        -webkit-transform: skewX(-15deg);
+    }
+    50%{
+        -webkit-transform: skewX(15deg);
+    }
+    60%{
+        -webkit-transform: skewX(-10deg);
+    }
+    70%{
+        -webkit-transform: skewX(10deg);
+    }
+    80%{
+        -webkit-transform: skewX(5deg);
+    }
+    90%{
+        -webkit-transform: skewX(5deg);
+    }
+}
+
+.pulse{
+    -webkit-animation: pulse 1s infinite;
+}
+
+@-webkit-keyframes pulse{
+    0%,100%{
+        -webkit-transform: scale(1);
+        color: white;
+    }
+    50%{
+        -webkit-transform: scale(1.1);
+        background-color: white;
+        color: black;
+    }
+}

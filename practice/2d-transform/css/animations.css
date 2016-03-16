@@ -1,0 +1,110 @@
+/*
+  @title: Web Animations w/ 2d Transform
+  @author: Paul John Diwa
+  @email: poldiwa@gmail.com
+*/
+
+.row{
+  text-align: center;
+}
+.box{
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  box-shadow: 0 0 6px #000;
+  -webkit-transition: transform 0.5s ease-in-out 0s;
+  -o-transition: transform 0.5s ease-in-out 0s;
+  transition: transform 0.5s ease-in-out 0s;
+}
+.crimson{
+  background-color: crimson;
+}
+.aquamarine{
+  background-color: aquamarine;
+}
+.seagreen{
+  background-color: darkseagreen;
+}
+.coral{
+  background-color: coral;
+}
+.slateblue{
+  background-color: darkslateblue;
+}
+.firebrick{
+  background-color: firebrick;
+}
+.chocolate{
+  background-color: chocolate;
+}
+.orchid{
+  background-color: darkorchid;
+}
+.forestgreen{
+  background-color: forestgreen;
+}
+.chartreuse{
+  background-color: chartreuse;
+}
+.translateX:active{
+  -webkit-transform: translateX(50px);
+  -ms-transform: translateX(50px);
+  -o-transform: translateX(50px);
+  transform: translateX(50px);
+}
+.translateY:active{
+  -webkit-transform: translateY(50px);
+  -ms-transform: translateY(50px);
+  -o-transform: translateY(50px);
+  transform: translateY(50px);
+}
+.rotateCW:active{
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.rotateCCW:active{
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+.scaleW:active{
+  -webkit-transform: scale(1.5,1);
+  -ms-transform: scale(1.5,1);
+  -o-transform: scale(1.5,1);
+  transform: scale(1.5,1);
+}
+.scale:active{
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  transform: scale(1.5);
+}
+.scaleH:active{
+  -webkit-transform: scale(1,1.5);
+  -ms-transform: scale(1,1.5);
+  -o-transform: scale(1,1.5);
+  transform: scale(1,1.5);
+}
+
+.skewX:active{
+  -webkit-transform: skewX(45deg);
+  -ms-transform: skewX(45deg);
+  -o-transform: skewX(45deg);
+  transform: skewX(45deg);
+}
+.skewY:active{
+  -webkit-transform: skewY(45deg);
+  -ms-transform: skewY(45deg);
+  -o-transform: skewY(45deg);
+  transform: skewY(45deg);
+}
+
+.skew:active{
+  -webkit-transform: skew(45deg,-45deg);
+  -ms-transform: skew(45deg,-45deg);
+  -o-transform: skew(45deg,-45deg);
+  transform: skew(45deg,-45deg);
+}

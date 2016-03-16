@@ -1,0 +1,51 @@
+html {
+  padding: 5%;
+  background: #333;
+  color: #333;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  perspective: 1200px;
+}
+
+.dot {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  background-color: black;
+  box-shadow: 0 0 6px #fff;
+  border-radius: 100px;
+  -webkit-animation: drawStar 2.25s infinite cubic-bezier(0, 0.15, 0, -0.15);
+}
+.reverse{
+  -webkit-animation-direction: reverse;
+}
+
+@-webkit-keyframes drawStar {
+  0% {
+    background-color: bisque;
+    -webkit-transform: translate3d(0px, 0px, 0px) rotate(0deg) scale3d(1, 1, 1);
+  }
+  20% {
+    background-color: darkslateblue;
+    -webkit-transform: translate3d(-200px, 450px, 0px) rotate(72deg) scale3d(0.95, 1.05, 1);
+  }
+  40% {
+    background-color: darkolivegreen;
+    -webkit-transform: translate3d(200px, 200px, 0px) rotate(144deg) scale3d(0.95, 1.05, 1);
+  }
+  60% {
+    background-color: cornflowerblue;
+    -webkit-transform: translate3d(-200px, 200px, 0px) rotate(216deg) scale3d(0.95, 1.05, 1);
+  }
+  80% {
+    background-color: crimson;
+    -webkit-transform: translate3d(200px, 450px, 0px) rotate(288deg) scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    background-color: bisque;
+    -webkit-transform: translate3d(0px, 0px, 0px) rotate(360deg) scale3d(1.05, 0.95, 1);
+  }
+}
