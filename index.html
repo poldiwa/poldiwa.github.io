@@ -18,53 +18,58 @@
   <title>poldiwa</title>
   <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-  <header id="intro">
+  <div id="loading">
+    <h1 class="pulse">
+     <em>Be fast but don't rush.</em>
+   </h1>
+  </div>
+  <header id="intro" class="overlay">
     <div class="row">
-      <div class="two columns offset-by-five">
-        <img src="images/me.jpeg" alt="" style="border-radius:50%;width:100%;">
+      <div class="columns two offset-by-five">
+        <img class="full-width circle" src="images/me.jpeg" alt="Paul John Diwa Thumbnail">
       </div>
     </div>
     <div class="row text-white">
       <div class="columns six offset-by-three">
-        <h5 class="text-center">Hi, I'm <strong>Paul John Diwa</strong>.<br> I'm passionate in web development and aspiring to be a successful full stack web developer.</h5>
+        <h5 id="intro__text" class="text-center">Hi, I'm <strong>Paul John Diwa</strong>.<br> I'm passionate in web development and aspiring to be a successful full stack web developer.</h5>
       </div>
     </div>
     <div class="row">
       <div class="columns two offset-by-three">
-        <a href="https://facebook.com/xpaulx" target="_blank" class="button button-block facebook text-white"><span class="fa fa-facebook-square"></span> Facebook</a>
+        <a href="https://facebook.com/xpaulx" target="_blank" class="hidden button full-width facebook text-white"><span class="fa fa-facebook-square"></span> Facebook</a>
       </div>
       <div class="columns two">
-        <a href="https://github.com/poldiwa" target="_blank" class="button button-block github text-white"><span class="fa fa-github"></span> Github</a>
+        <a href="https://github.com/poldiwa" target="_blank" class="hidden button full-width github text-white"><span class="fa fa-github"></span> Github</a>
       </div>
       <div class="columns two">
-        <a href="http://freecodecamp.com/poldiwa" target="_blank" class="button button-block codecamp text-white">&#40;<span class="fa fa-fire"></span>&#41; FreeCodeCamp</a>
+        <a href="http://freecodecamp.com/poldiwa" target="_blank" class="hidden button full-width codecamp text-white">&#40;<span class="fa fa-fire"></span>&#41; FreeCodeCamp</a>
       </div>
     </div>
   </header>
-  <nav>
+  <nav class="navbar">
     <ul class="nav-left">
       <li><a href="#intro">Poldiwa</a></li>
     </ul>
     <ul class="nav-right">
-      <li><a href="#myWorks">My Works</a></li>
+      <li><a href="#my-works">My Works</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
-  <section id="myWorks">
-    <br>
+  <section id="my-works">
     <div class="container">
       <h4>My Works</h4>
       <div class="row">
         <div class="columns four card text-center">
           <img class="card__image" src="images/quote-generator.jpg" alt="quote generator thumbnail">
           <p class="card__text">Random Quote Generator</p>
-          <a href="freecodecamp/" target="_blank" class="button">View</a>
+          <a href="freecodecamp/quote-generator/" target="_blank" class="button">View</a>
         </div>
         <div class="columns four card text-center">
           <img class="card__image" src="images/2d-transforms.jpg" alt="quote generator thumbnail">
@@ -97,34 +102,24 @@
     </div>
   </section>
   <section id="about">
-    <br>
+    <video class="video--background" autoplay loop muted>
+      <source src="videos/bg.mp4" type="video/mp4">
+    </video>
     <div class="container">
       <h4>About</h4>
       <div class="row">
-        <div class="columns one">
-          <div id="fb-root"></div>
-          <script>
-            (function(d, s, id) {
-              var js, fjs = d.getElementsByTagName(s)[0];
-              if (d.getElementById(id)) return;
-              js = d.createElement(s);
-              js.id = id;
-              js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
-              fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-
-          </script>
-          <div class="fb-post" data-href="https://www.facebook.com/photo.php?fbid=1065417076818075&amp;set=a.153231911369934.29534.100000493771926&amp;type=3" data-width="500">
-            <div class="fb-xfbml-parse-ignore">
-              <blockquote cite="https://www.facebook.com/photo.php?fbid=1065417076818075&amp;set=a.153231911369934.29534.100000493771926&amp;type=3">Posted by <a href="https://www.facebook.com/xPaulx">Paul John Diwa</a> on&nbsp;<a href="https://www.facebook.com/photo.php?fbid=1065417076818075&amp;set=a.153231911369934.29534.100000493771926&amp;type=3">Saturday, March 21, 2015</a></blockquote>
-            </div>
+        <div class="columns three">
+          <div class="img-container">
+            <img class="full-width" src="images/me.jpeg" alt="Paul John Diwa">
+            <img class="full-width" src="images/me2.png" alt="Paul John Diwa">
           </div>
         </div>
-        <div class="columns six offset-by-five">
+        <div class="columns nine">
           <p><strong>Name:</strong> Paul John C. Diwa</p>
           <p><strong>Age:</strong> 20</p>
           <p><strong>Birthday:</strong> 12/20/1995</p>
-          <p><strong>Quotes:</strong> "There is no such thing as your best, because you can always do better."</p>
+          <p><strong>Quotes:</strong> "There is no such thing as your best, because you can always do better." <sub>&minus; someone</sub></p>
+          <p><strong>Knowledge:</strong></p>
           <div class="row">
             <div class="column one-third">
               <strong>Frontend:</strong>
@@ -133,12 +128,12 @@
                 <li>JavaScript
                   <ul>
                     <li>jQuery</li>
-                    <li>AngularJS</li>
+                    <li class="text-muted">AngularJS</li>
                   </ul>
                 </li>
                 <li>CSS
                   <ul>
-                    <li>SASS</li>
+                    <li class="text-muted">SASS</li>
                   </ul>
                 </li>
               </ul>
@@ -148,7 +143,7 @@
               <ul>
                 <li>PHP
                   <ul>
-                    <li class="muted">Laravel</li>
+                    <li class="text-muted">Laravel</li>
                   </ul>
                 </li>
                 <li>MySQL</li>
@@ -158,7 +153,10 @@
               <strong>Others:</strong>
               <ul>
                 <li>Bootstrap Framework</li>
-                <li>Ionic Framework</li>
+                <li class="text-muted">Ionic Framework</li>
+                <li class="text-muted">Git</li>
+                <li class="text-muted">NodeJS</li>
+                <li class="text-muted">NW.js</li>
               </ul>
             </div>
           </div>
@@ -169,37 +167,11 @@
   </section>
 
   <section id="contact">
-    <br>
     <div class="container">
       <h2 class="text-center"><span class="fa fa-envelope-o"></span> poldiwa@gmail.com</h2>
     </div>
   </section>
-  <script src="js/jquery-2.1.1.js"></script>
-  <script>
-    $(function() {
-      $("nav a").on("click", function(e) {
-        e.preventDefault();
-        var id = $(this).attr("href");
-        var offset = $(id).offset().top;
-        $("body").animate({
-          scrollTop: offset
-        }, 750);
-      });
-
-      var t = $("#intro").offset().top;
-      var h = $("#intro").css("height");
-      var s = t + parseInt(h.replace("px", ""));
-
-      $(window).on("scroll", function(e) {
-        if ($(document).scrollTop() >= s) {
-          $("nav").addClass('sticky');
-        } else {
-          $("nav.sticky").removeClass("sticky");
-        }
-      });
-    });
-
-  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="js/app.min.js"></script>
 </body>
-
 </html>
