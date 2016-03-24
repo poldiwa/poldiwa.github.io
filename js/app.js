@@ -40,7 +40,7 @@ $(function () {
     }, 250);
   });
   $(window).on('load', function () {
-    setTimeout(function () {
+//    setTimeout(function () {
       //    var untype = setInterval(function () {
       //      var loading = $("#loading").text().trim().split("");
       //      if (loading.length <= 0) {
@@ -53,7 +53,7 @@ $(function () {
       //      loading = loading.join("");
       //      $("#loading").html('<h1 class="pulse"><em>' + loading + '</h1></em>');
       //    },128);
-    }, 1000);
+//    }, 1000);
   });
 
   function typing() {
