@@ -58,7 +58,7 @@ $(function () {
 
   function typing() {
     var counter = 0;
-    var intro = "Hi, I'm <strong>Paul John Diwa</strong>.<br> I'm passionate in web development and aspiring to be a successful full stack web developer.".split("");
+    var intro = $("#intro__text").html().split("");
     var type = setInterval(function () {
       if (counter <= intro.length) {
         $("#intro__text").html(intro.slice(0, counter).join("") + '<span id="pointer" style="width:1px; border:1px solid #fff"></span>');
