@@ -37,10 +37,13 @@
       var appid = '1f7d8348d86b730b9e6e921b70cd9566';
       $.get('http://ipinfo.io/json',function(response){
         getWeather('',response.loc.split(',')[0],response.loc.split(',')[1]);
-      },function(error){
+      });
+      
+      if(location.protocol=="https"){
         alert('Redirecting to http version');
         window.location = "http://poldiwa.github.io/freecodecamp/weather-app";
-      });
+      }
+      
       $('.modal-form').on('submit',function(e){
         e.preventDefault();
         $form = $(this);
