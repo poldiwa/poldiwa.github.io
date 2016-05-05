@@ -39,7 +39,7 @@
         getWeather('',response.loc.split(',')[0],response.loc.split(',')[1]);
       });
       
-      if(location.protocol=="https"){
+      if(location.protocol=="https:"){
         alert('Redirecting to http version');
         window.location = "http://poldiwa.github.io/freecodecamp/weather-app";
       }
