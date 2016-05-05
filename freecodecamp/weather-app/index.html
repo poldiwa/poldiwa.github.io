@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Local Weather</title>
-  <link href='https://fonts.googleapis.com/css?family=Raleway:300,200' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:300,200' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -29,21 +29,18 @@
      <button>Continue</button> 
     </form>
   </div>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script>
     (function(window,document,navigator){
       var farenheitSymbol = '&#8457;';
       var celsiusSymbol = '&#8451;';
       var appid = '1f7d8348d86b730b9e6e921b70cd9566';
-      
-      if(navigator.geolocation){
-        navigator.geolocation.watchPosition(function(position){
-          getWeather('',position.coords.latitude,position.coords.longitude);
-        });
-      }
-      else{
-        $('#modal').removeClass('hidden');
-      }
+      $.get('http://ipinfo.io/json',function(response){
+        getWeather('',response.loc.split(',')[0],response.loc.split(',')[1]);
+      },function(error){
+        alert('Redirecting to http version');
+        window.location = "http://poldiwa.github.io/freecodecamp/weather-app";
+      });
       $('.modal-form').on('submit',function(e){
         e.preventDefault();
         $form = $(this);
